@@ -91,7 +91,7 @@
 	 * Initializes input devices (camera and optionally microphone)
 	 */
 	CamRecorder.prototype.init = function(){
-		navigator.mediaDevices.getUserMedia({
+		return navigator.mediaDevices.getUserMedia({
 			audio: this._audio,
 			video: {
 				width: {ideal: this._videoWidth},
@@ -113,7 +113,7 @@
 			console.error(e);
 		});
 	};
-	
+
 	/**
 	 * Starts recording
 	 */
@@ -246,6 +246,7 @@
 			}
 		}
 		xhr.open('POST', url);
+		xhr.withCredentials = true;
 		xhr.send(fd);
 	};
 
