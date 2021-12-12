@@ -69,6 +69,10 @@ audio {
 	margin: 0 0 20px 0;
 }
 
+div.row {
+	margin-bottom: 10px;
+}
+
 #status-display {
 	font-size: 0.8em;
 }
@@ -78,8 +82,8 @@ audio {
 	/*max-width: 40em;*/
 }
 
-div.row {
-	margin-bottom: 10px;
+#reset {
+	float:right;
 }
 
 @media screen and (max-width: 650px) {
